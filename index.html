@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Whatsapp web chat</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- linking bootstrap CDN -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <!-- linking external style sheet -->
+  <link rel="stylesheet" href="style.css">
+  <!-- linkig fontawsome CDN -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
+  <!-- linking fav-icon -->
+  <link rel="shortcut icon" href="img/fav.ico" type="image/x-icon">
+</head>
+
+
+<body>
+  <div class="container app">
+    <div class="row app-one">
+      <div class="col-sm-4 side">
+        <div class="side-one">
+          <div class="row heading">
+            <div class="col-sm-9 col-9 p-0">
+              <div class="heading-avatar-icon">
+                <img src="img/me.jpg" id="profile" style="cursor: pointer;">
+              </div>
+            </div>
+            <div class="col-sm-2 col-2 heading-compose  float-right">
+              <i class="fa fa-comments fa-1x  pull-right" aria-hidden="true" style="font-size: 20px;"></i>
+            </div>
+            <div class="col-sm-1 col-1  heading-dot float-right">
+                <i class="fa fa-ellipsis-v fa-1x " aria-hidden="true" style="font-size:20px"></i>
+            </div>
+          </div>
+
+          <div class="row searchBox">
+            <div class="col-sm-12 searchBox-inner">
+              <div class="has-feedback input-group">
+                <div class="input-group-prepend" style="width: unset;">
+                  <span class="input-group-text">
+                    <i class=" fas fa-search"></i>
+                  </span>
+                </div>
+                <input id="searchText" type="text" class="form-control" name="searchText" placeholder="Search">
+              </div>
+            </div>
+          </div>
+          <div class="row sideBar"></div>
+        </div>
+
+        <div class="side-two">
+          <div class="row newMessage-heading">
+            <div class="row newMessage-main">
+              <div class="col-sm-2 col-2 newMessage-back">
+                <i class="fa fa-arrow-left" aria-hidden="true"></i>
+              </div>
+              <div class="col-sm-10 col-10 newMessage-title">
+                New Chat
+              </div>
+            </div>
+          </div>
+
+          <div class="row composeBox">
+            <div class="col-sm-12 composeBox-inner">
+              <div class="has-feedback input-group">
+                <div class="input-group-prepend" style="width:unset;">
+                  <span class="input-group-text">
+                    <i class="fas fa-search"></i>                    
+                  </span>
+                </div>
+                <input id="composeText" type="text" class="form-control" name="searchText" placeholder="Search People">
+              </div>
+            </div>
+          </div>
+          <div class="row compose-sideBar"></div>
+        </div>
+        <div class="side-three" style="overflow-y:auto">
+          <div class="row newMessage-heading">
+            <div class="row newMessage-main">
+              <div class="col-sm-2 col-2 newMessage-back2">
+                <i class="fa fa-arrow-left" aria-hidden="true"></i>
+              </div>
+              <div class="col-sm-10 col-10 newMessage-title">
+                Profile
+              </div>
+            </div>
+          </div>
+          <div class="row profile-image" style="margin-left: 10px">
+            <div class="col-sm-12" id="overlay">
+              <label for="image" class="mx-auto d-block">
+              <img src="img/me.jpg" alt="image" class="img-fluid rounded-circle mx-auto d-block mt-2 " style="width: 200px" >
+              </label>
+              <input type="file" id="image" style="display:none;">
+            </div>
+          </div>
+          <div class="row box" style="margin-left: 0px;">
+            <div class="col-12">
+              <p class="text-success ml-1">Name:</p>
+              <div class="input-group">
+                <input type="text" value="Avinash" class="input" disabled>
+                <div class="input-group-append" style="width: unset;">
+                  <span class="input-group-text input">
+                    <i class="fas fa-pencil-alt edit"></i>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row" style="height: auto;margin-left: 0px;">
+            <div class="col-12">
+              <p class="text-muted m-3">
+                This is not your username or pin. This name will be visible to your WhatsApp contacts.
+              </p>
+            </div>
+          </div>
+          <div class="row box" style="margin-left: 0px;">
+            <div class="col-12">
+              <p class="text-success ml-1">About:</p>
+              <div class="input-group">
+                <input type="text" value="Battery about to die" class="input" disabled>
+                <div class="input-group-append" style="width: unset;">
+                  <span class="input-group-text input">
+                    <i class="fas fa-pencil-alt edit"></i>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- linking jquery script file -->
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <!-- linking popper script file -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <!-- linking bootstrap script file -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+  <!-- linking external js files -->
+  <script src="data.js"></script><!-- data.js file has functions to parse JSON data  -->
+  <script src="main.js"></script><!-- main.js file has functions to add event listeners  -->
+</body>
+
+</html>
